@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './app.module'
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor'
+import { ResponseInterceptor } from './common/interceptors/response.interceptors'
 import { HttpExceptionFilter } from './common/filters/http-exception.filter'
 
 async function bootstrap() {
@@ -12,6 +13,7 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter())
 
   // 全局拦截器
+  app.useGlobalInterceptors(new ResponseInterceptor())
   app.useGlobalInterceptors(new LoggingInterceptor())
 
   await app.listen(3000)
