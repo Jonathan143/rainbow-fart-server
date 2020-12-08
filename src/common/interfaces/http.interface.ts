@@ -5,7 +5,7 @@ export enum RCode {
 }
 
 // HTTP 状态返回
-export interface IHttpResponseBase<T = unknown> {
+export interface IHttpResponse<T = unknown> {
   code?: RCode
   message?: string
   data?: T
