@@ -5,6 +5,6 @@ import { Model } from 'mongoose'
 @Injectable()
 export class WechatService {
   constructor(
-    @InjectModel('Wechat') private readonly wechatModel: Model<any>,
+    @InjectModel('Wechats') private readonly wechatModel: Model<any>,
   ) {}
 }

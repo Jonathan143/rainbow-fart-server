@@ -31,7 +31,6 @@
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.3",
     "geoip-lite": "^1.4.2",
-    "mjml": "^4.8.1",
     "mongoose": "^5.10.9",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
