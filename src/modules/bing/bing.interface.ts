@@ -1,0 +1,1 @@
+// bing.interface.ts

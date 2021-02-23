@@ -1,0 +1,1 @@
+// wechat.interface.ts
