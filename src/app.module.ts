@@ -5,11 +5,12 @@ import { AppService } from './app.service'
 import { UserModule } from './modules/user/user.module'
 import { WechatModule } from './modules/wechat/wechat.module'
 import { BingModule } from './modules/bing/bing.module'
+import { YiYanModule } from './modules/yiyan/yiyan.module'
 
 const DBModule = MongooseModule.forRoot('mongodb://localhost:27017/nest_demo')
 
 @Module({
-  imports: [DBModule, UserModule, WechatModule, BingModule],
+  imports: [DBModule, UserModule, WechatModule, BingModule, YiYanModule],
   controllers: [AppController],
   providers: [AppService],
 })
