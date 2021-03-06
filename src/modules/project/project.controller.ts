@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common'
+import { Controller, Get, Post, Body, Query } from '@nestjs/common'
 import { IHttpResponse } from '@app/common/interfaces/http.interface'
 import simpleGit from 'simple-git'
 
@@ -52,8 +52,8 @@ export class ProjectController {
    */
   @Get('/branch')
   async projectBranchLocal(
-    @Param('name') name: string,
-    @Param('type') local = '',
+    @Query('name') name: string,
+    @Query('local') local = '',
   ) {
     return {
       data: local ? await git(name).branchLocal() : await git(name).branch(),
