@@ -9,7 +9,7 @@ export const bingSchema = new Schema({
   cdn_url: { type: String },
 })
 
-export const schSchema = new Schema({
+export const cronSchema = new Schema({
   _id: { type: String, required: true },
   name: { type: String, required: true },
   type: { type: String, required: true },
